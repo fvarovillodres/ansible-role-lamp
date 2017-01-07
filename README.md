@@ -14,7 +14,7 @@ No special requirements; note that this role requires root access, so either run
 
     - hosts: database
       roles:
-        - role: geerlingguy.mysql
+        - role: fvarovillodres.lamp
           become: yes
 
 ## Role Variables
