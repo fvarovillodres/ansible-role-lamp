@@ -1,0 +1,6 @@
+---
+  - name: update
+    command: apt-get update
+  - include: apache.yml
+  - include: mysql.yml
+  - include: php.yml

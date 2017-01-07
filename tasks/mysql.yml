@@ -1,0 +1,10 @@
+---
+  - name: Instalando mysql
+    apt: name=mysql-server state=present
+  - name: Instalando modulo python-mysqldb
+    apt: name=python-mysqldb state=present
+  - name: Añadiendo bases de datos
+    mysql_db: name=ASIR
+              state=present
+    notify:
+      - reiniciando mysql
