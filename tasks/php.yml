@@ -1,9 +1,0 @@
----
-  - name: Instalando php
-    apt: name=php5 state=present
-  - name: Instalando paquetes php5
-    apt: name={{ item }}
-         state=latest
-    with_items:
-          - php5-mysql
-          - libapache2-mod-php5
