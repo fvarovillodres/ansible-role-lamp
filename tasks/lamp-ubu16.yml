@@ -1,4 +1,12 @@
 ---
+  - name: "FIX: Ubuntu 16.04 LTS doesn't come with certain modules, required by ansible"
+    raw: apt-get install python-minimal aptitude -y
+  - name: Update apt cache
+    apt: update_cache=yes
+  - name: Upgrade
+    apt:
+      upgrade: yes
+
   - name: Instalando apache
     apt: name=apache2 state=present
   - name: Nuevo sitio virtual
@@ -30,3 +38,20 @@
     apache2_module: state=present name=userdir
     notify:
       - reiniciando apache
+  - name: Instalando mysql
+    apt: name=mysql-server state=present
+  - name: Instalando modulo python-mysqldb
+    apt: name=python-mysqldb state=present
+  - name: Añadiendo bases de datos
+    mysql_db: name=ASIR
+                  state=present
+    notify:
+      - reiniciando mysql
+  - name: Instalando PHP
+    apt: name=php state=present
+  - name: Instalando paquetes php
+    apt: name={{ item }}
+         state=latest
+    with_items:
+          - php-mysql
+          - libapache2-mod-php

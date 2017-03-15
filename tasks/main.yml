@@ -1,6 +1,16 @@
 ---
-  - name: update
-    command: apt-get update
-  - include: apache.yml
-  - include: mysql.yml
-  - include: php.yml
+- include: lamp-ubu14.yml
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_major_version <= "15.10"
+  static: no
+
+- include: lamp-ubu16.yml
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "16.04"
+  static: no
+
+- include: lamp-ubu14.yml
+  when: ansible_distribution == "Debian"
+  static: no
+
+- include: lamp-centos.yml
+  when: ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux"
+  static: no

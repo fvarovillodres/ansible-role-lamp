@@ -2,12 +2,20 @@ galaxy_info:
   author: Francisco Manuel Varo Villodres
   description: Install LAMP stack
   license: BSD
-  min_ansible_version: 1.2
+  min_ansible_version: 2.2
   platforms:
     - name: Ubuntu
       versions:
         - all
-
+    - name: Debian
+      versions:
+        - all
+    - name: RHEL
+      versions:
+        - all
+    - name: CentOS
+      versions:
+        - all
   galaxy_tags:
     - web
     - database
