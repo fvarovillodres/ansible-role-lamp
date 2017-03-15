@@ -1,7 +1,7 @@
 # Ansible Role: LAMP
 =========
 
-Simple instalation of a LAMP stack on Debian/Ubuntu
+Simple instalation of a LAMP stack on Debian/Ubuntu or RHEL/CentOS
 
 ## Instalation
 ------------
