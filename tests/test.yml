@@ -2,4 +2,4 @@
 - hosts: all
   become: yes
   roles:
-    - lamp
+    - ansible-role-lamp

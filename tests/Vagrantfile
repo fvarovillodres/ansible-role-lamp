@@ -21,13 +21,23 @@ Vagrant.configure("2") do |config|
             ansible.playbook = "test.yml"
     end
   end
-  config.vm.define "deb" do |deb|
-   deb.vm.box = "debian/jessie64"
-   deb.vm.hostname = 'deb'
+  config.vm.define "deb8" do |deb8|
+   deb8.vm.box = "debian/jessie64"
+   deb8.vm.hostname = 'deb8'
 
-    deb.vm.network :public_network, ip: "192.168.1.24"
-    deb.vm.network :forwarded_port, guest: 22, host: 10322, id: "ssh"
-    deb.vm.provision :ansible do |ansible|
+    deb8.vm.network :public_network, ip: "192.168.1.24"
+    deb8.vm.network :forwarded_port, guest: 22, host: 10322, id: "ssh"
+    deb8.vm.provision :ansible do |ansible|
+            ansible.playbook = "test.yml"
+    end
+  end
+  config.vm.define "deb9" do |deb9|
+   deb9.vm.box = "debian/stretch64"
+   deb9.vm.hostname = 'deb9'
+
+    deb9.vm.network :public_network, ip: "192.168.1.25"
+    deb9.vm.network :forwarded_port, guest: 22, host: 10422, id: "ssh"
+    deb9.vm.provision :ansible do |ansible|
             ansible.playbook = "test.yml"
     end
   end
@@ -35,8 +45,8 @@ Vagrant.configure("2") do |config|
    cent.vm.box = "centos/7"
    cent.vm.hostname = 'cent'
 
-    cent.vm.network :public_network, ip: "192.168.1.25"
-    cent.vm.network :forwarded_port, guest: 22, host: 10422, id: "ssh"
+    cent.vm.network :public_network, ip: "192.168.1.26"
+    cent.vm.network :forwarded_port, guest: 22, host: 10522, id: "ssh"
     cent.vm.provision :ansible do |ansible|
             ansible.playbook = "test.yml"
     end
