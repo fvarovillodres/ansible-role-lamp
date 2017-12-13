@@ -35,4 +35,4 @@ You can change the document root of Apache in `vars/main.yml` . You are free to 
 ## Author Information
 ------------------
 
-Francisco M Varo Villodres student of SysAdmin in Málaga, Spain.
+Francisco M Varo Villodres, SysAdmin in Málaga, Spain.
