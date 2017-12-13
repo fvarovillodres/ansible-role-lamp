@@ -1,3 +1,5 @@
+[![GitHub forks](https://img.shields.io/github/forks/fvarovillodres/ansible-role-lamp.svg?style=social&label=Fork&style=flat-square)]()
+
 # Ansible Role: LAMP
 =========
 
