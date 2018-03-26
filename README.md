@@ -1,4 +1,5 @@
-[![GitHub forks](https://img.shields.io/github/forks/fvarovillodres/ansible-role-lamp.svg?style=social&label=Fork&style=flat-square)]() [![GitHub last commit](https://img.shields.io/github/last-commit/fvarovillodres/ansible-role-lamp.svg?style=flat-square)]()
+[![GitHub forks](https://img.shields.io/github/forks/fvarovillodres/ansible-role-lamp.svg?style=social&label=Fork&style=flat-square)][![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffvarovillodres%2Fansible-role-lamp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffvarovillodres%2Fansible-role-lamp?ref=badge_shield)
+() [![GitHub last commit](https://img.shields.io/github/last-commit/fvarovillodres/ansible-role-lamp.svg?style=flat-square)]()
 
 # Ansible Role: LAMP
 =========
@@ -36,3 +37,7 @@ You can change the document root of Apache in `vars/main.yml` . You are free to 
 ------------------
 
 Francisco M Varo Villodres, SysAdmin in Málaga, Spain.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffvarovillodres%2Fansible-role-lamp.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffvarovillodres%2Fansible-role-lamp?ref=badge_large)
